@@ -16,7 +16,7 @@ class TourTypeController extends Controller
     
     public function store(Request $request){
         try {
-            $addLoai = DB::table('tourtype')->insert(
+            $addType = DB::table('tourtype')->insert(
                 [
                     'tour_type_name' => $request->typeName,
                     'created_at' => Carbon::now()
