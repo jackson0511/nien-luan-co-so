@@ -8,7 +8,8 @@ use DB;
 class TourController extends Controller
 {
     public function index(){
-        $tour = DB::table('tour')->get();
-        return view('admin.tour.tour', compact('tour'));
+        $tourList = DB::table('tour')->join('tourtype','tourtype.tour_type_id','tour.tour_type_id')->get();
+        $tourTypeList = DB::table('tourtype')->get();
+        return view('admin.tour.tour', compact('tourList','tourTypeList'));
     }
 }
