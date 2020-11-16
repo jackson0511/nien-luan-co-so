@@ -35,7 +35,12 @@ class TourController extends Controller
                     'tour_picture' => $request->tourPic,
                     'created_at' => Carbon::now()
                 ]
-            )
+            );
+            $request->session()->flash('alert', 'Successfully added');
+            return redirect()->route('tour-list');
+        } catch (\Throwable $th){
+            $request->session()->flash('alert-error', 'Adding process error');
+            return redirect()->route('tour-list');
         }
     }
 }
