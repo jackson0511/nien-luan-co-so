@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +13,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('/tour-list', 'App\Http\Controller\TourController@index')->name('tour-list');
 });
+
+Route::get('/', function () {
+    return view('client.index');
+});
+Route::get('/admin', function () {
+    return view('admin.index');
+});
+// Route::get('/admin/tour', function () {
+//     return view('admin.tour.tour');
+// });
