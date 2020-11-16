@@ -22,6 +22,7 @@ class TableTour extends Migration
             $table->string('tour_end_location');
             $table->date('tour_begin');
             $table->date('tour_end');
+            $table->string('tour_picture');
             $table->bigInteger('tour_type_id')->unsigned();
             $table->bigInteger('promo_id')->unsigned();
             $table->foreign('tour_type_id')->references('tour_type_id')->on('tourtype');
