@@ -86,8 +86,7 @@
         </div>
     </div>
 </section>
-
-<section class="ftco-section services-section bg-light">
+{{-- <section class="ftco-section services-section bg-light">
     <div class="container">
         <div class="row d-flex">
             <div class="col-md-6 order-md-last heading-section pl-md-5 ftco-animate">
@@ -139,9 +138,8 @@
                 </div>
         </div>
     </div>
-</section>
-    
-<section class="ftco-counter img" id="section-counter">
+</section> --}}
+{{-- <section class="ftco-counter img" id="section-counter">
     <div class="container">
         <div class="row d-flex">
             <div class="col-md-6 d-flex">
@@ -183,9 +181,7 @@
             </div>
         </div>
     </div>
-</section>
-    
-    
+</section> --}}
 <section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center pb-4">
@@ -237,7 +233,6 @@
         </div>
     </div>
 </section>
-    
 <section class="ftco-section ftco-no-pt">
     <div class="container">
         <div class="row justify-content-center pb-4">
@@ -294,7 +289,6 @@
                     </div>
                 </div>
             </div>
-            
             <div class="col-md-4 ftco-animate">
                 <div class="project-wrap">
                     <a href="#" class="img" style="background-image: url({{asset('client_template')}}/images/destination-4.jpg);"></a>
@@ -346,8 +340,7 @@
         </div>
     </div>
 </section>
-
-<section class="ftco-section testimony-section bg-bottom" style="background-image: url({{asset('client_template')}}/images/bg_3.jpg);">
+{{-- <section class="ftco-section testimony-section bg-bottom" style="background-image: url({{asset('client_template')}}/images/bg_3.jpg);">
     <div class="container">
         <div class="row justify-content-center pb-4">
             <div class="col-md-7 text-center heading-section ftco-animate">
@@ -431,10 +424,8 @@
             </div>
         </div>
     </div>
-</section>
-    
-    
-<section class="ftco-section">
+</section> --}}
+{{-- <section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center pb-4">
             <div class="col-md-12 heading-section text-center ftco-animate">
@@ -501,5 +492,5 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 @endsection
