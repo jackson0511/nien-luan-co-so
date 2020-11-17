@@ -42,7 +42,11 @@ class TourTypeController extends Controller
     {
         //Recheck -- did not pop the notification
         try {
-            $updateTourType = DB::table('tourtype')->where('tour_type_id', $id)->update(['tour_type_name'=>$request->typeName]);
+            $updateTourType = DB::table('tourtype')->where('tour_type_id', $id)->update(
+                [
+                    'tour_type_name'=>$request->typeName
+                ]
+            );
             Session::flash('alert-update', 'Update Successfully');
             return redirect()->route('tour-type-list');
         } catch (\Throwable $th) {
@@ -66,7 +70,6 @@ class TourTypeController extends Controller
             Session::flash('alert-del-error', 'Deleting Process Error');
             return redirect()->route('tour-type-list');
         }
-        
     }
 
     public function search(Request $request){
