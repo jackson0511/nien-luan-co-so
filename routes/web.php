@@ -34,13 +34,3 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/search-promo', 'PromoController@search')->name('search-promo');
     Route::get('/detail-promo/{id}', 'PromoController@show')->name('detail-promo');
 });
-
-Route::get('/', function () {
-    return view('client.index');
-});
-Route::get('/admin', function () {
-    return view('admin.index');
-});
-// Route::get('/admin/tour', function () {
-//     return view('admin.tour.tour');
-// });

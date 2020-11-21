@@ -3,15 +3,15 @@
 <div class="container-fluid">
     <div class="row mb-2">
         <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Promotion</h1>
+            <h1 class="m-0 text-dark">Chương trình khuyến mãi</h1>
         </div><!-- /.col -->
     </div><!-- /.row -->
 </div><!-- /.container-fluid -->
 @endsection
 @section('content')
 <div class="row">
-    <div class="col-9 text-center">
-        <h4>Promotion list by keyword: {{$keyWord}}</h4>
+    <div class="col-7 text-center">
+        <h4>Danh sách chương trình khuyến mãi theo từ khóa: {{$keyWord}}</h4>
         @if (Session::has('alert-del'))
         <p style="color:green" class="text-center">
             {{Session::get('alert-del')}}
@@ -33,8 +33,8 @@
         </p>
         @endif
     </div>
-    <div class="col-3 text-center">
-        <h4>Add Promotion</h4>
+    <div class="col-5 text-center">
+        <h4>Thêm chương trình khuyến mãi</h4>
         @if (Session::has('alert'))
         <p style="color:green" class="text-center">
             {{Session::get('alert')}}
@@ -49,18 +49,18 @@
 </div>
 
 <div class="row">
-    <div class="col-9">
+    <div class="col-7">
         <form action="{{route('search-promo')}}" method="GET">
-            <input type="text" placeholder="Search..." class="col-10 ml-4" name="keyWord">
-            <button type="submit" class="btn btn-primary">Search</button>
+            <input type="text" placeholder="Tìm kiếm..." class="col-10 ml-4" name="keyWord">
+            <button type="submit" class="btn btn-primary">Tìm</button>
         </form>
         <table class="table mt-3">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">ID</th> 
-                    <th scope="col">Tour Type Name</th>
-                    <th scope="col">Action</th>
+                    <th scope="col">Tên chương trình khuyến mãi</th>
+                    <th scope="col">Thao tác</th>
                 </tr>
             </thead>
             <tbody>
@@ -68,42 +68,43 @@
                 @php $i=1 @endphp
                 <tr>
                     <th>{{$i++}}</th>
-                    <th>{{$item->tour_type_id}}</th>
-                    <td>{{$item->tour_type_name}}</td>
+                    <th>{{$item->promo_id}}</th>
+                    <td>{{$item->promo_name}}</td>
                     <td>
-                        <a href="{{route('edit-type',['id'=>$item->tour_type_id])}}"class="btn btn-success">Edit</a>
-                        <a href="{{route('delete-type',['id'=>$item->tour_type_id])}}"class="btn btn-danger"onClick='return delete()'>Delete</a>
+                        <a href="{{route('edit-type',['id'=>$item->promo_id])}}"class="btn btn-success">Sửat</a>
+                        <a href="{{route('delete-type',['id'=>$item->promo_id])}}"class="btn btn-danger"onClick='return delete()'>Xóa</a>
                     </td>
                 </tr>
                 @endforeach
             </tbody>
         </table>
     </div>
-    <div class="col-4">
+    <div class="col-5">
 		<form action="{{route('add-promo')}}" method="POST">
 			@csrf
 			<div class="form-group">
-				<label for="promoName">Promotion Name</label>
-				<input type="text" name="promoName"class="form-control" id="promoName"  placeholder="Enter promotion name..." required>
-				<label for="promoBegion">Promotion Begin Date</label><br>
-				<input type="date" class="col-12" name="promoBegin" id="promoBegin"><br>
-				<label for="promoBegion">Promotion Expired Date</label><br>
-				<input type="date" class="col-12" name="promoEnd" id="promoEnd">
-				<label for="promoDisc">Promotion Description</label>
-				<textarea name="promoDisc" class="form-control" id="summernote" cols="46" rows="10" placeholder="Enter promotion discription"></textarea>
+				<label for="promoName">Tên chương trình khuyến mãi:</label>
+				<input type="text" name="promoName"class="form-control" id="promoName"  placeholder="Nhập tên chương trình khuyến mãi..." required>
+				<label for="promoBegion">Ngày bắt đầu:</label>
+				<input type="date" class="form-control" name="promoBegin" id="promoBegin">
+				<label for="promoBegion">Ngày kết thúc:</label>
+				<input type="date" class="form-control" name="promoEnd" id="promoEnd">
+				<label for="promoDisc">Chi tiết chương trình khuyến mãi:</label>
+				<textarea name="promoDisc" class="form-control" class="summernote" cols="46" rows="7" placeholder="Nhập chi tiết chương trình khuyến mãi..."></textarea>
 			</div>
-			<button type="submit" class="btn btn-primary">Add</button>
+			<div class="form-group text-right">
+				<button type="submit" class="btn btn-primary">Thêm</button>
+			</div>
 		</form>
 	</div>
 </div>   
-
 <script>
-    function delete(){
-        const a = confirm("Are you sure to delete this?");
-        if(a==true){
-            return true;
-        }
-        return false;
-    }
+	function del(){
+		const a = confirm("Bạn có chắc là muốn xóa chứ?");
+		if(a==true){
+			return true;
+		}
+		return false;
+	}
 </script>
 @endsection
