@@ -8,7 +8,7 @@ use DB;
 class TourController extends Controller
 {
     public function index(){
-        $tourList = DB::table('tour')->join('tourtype','tourtype.tour_type_id','tour.tour_type_id')->get();
+        $tourList = DB::table('tour')->join('tourtype','tourtype.tour_type_id','tour.tour_type_id')->join('promo', 'promo.promo_id','tour.promo_id')->get();
         $tourTypeList = DB::table('tourtype')->get();
         return view('admin.tour.tour', compact('tourList','tourTypeList'));
     }
@@ -19,6 +19,9 @@ class TourController extends Controller
         return view('admin.tour.tour',compact('keyWord', 'search'));
     }
 
+    public function create(){
+        return view('admin.tour.add');
+    }
     public function store(Request $request){
         try{
             $addTour = DB::table('tour')->insert
@@ -31,8 +34,8 @@ class TourController extends Controller
                     'tour_end_location' => $request->endLoc,
                     'tour_begin' => $request->timeBegin,
                     'tour_end' => $request->timeEnd,
-                    'tour_end' => $request->timeEnd,
-                    'tour_picture' => $request->tourPic,
+                    'tour_picture' => $request->timeEnd,
+                    'tour_type_id' => $request->tourType,
                     'created_at' => Carbon::now()
                 ]
             );
@@ -42,5 +45,11 @@ class TourController extends Controller
             $request->session()->flash('alert-error', 'Adding process error');
             return redirect()->route('tour-list');
         }
+    }
+
+    public function show($id){
+        $tourList = DB::table('tour')->join('tourtype','tourtype.tour_type_id','tour.tour_type_id')->join('promo', 'promo.promo_id','tour.promo_id')->get();
+        $tourTypeList = DB::table('tourtype')->get();
+        return view('admin.tour.detail', compact('tourList','tourTypeList'));
     }
 }

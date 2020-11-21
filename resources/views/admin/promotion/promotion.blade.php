@@ -62,7 +62,7 @@
 				<label for="promoBegion">Promotion Expired Date</label><br>
 				<input type="date" class="col-12" name="promoEnd" id="promoEnd">
 				<label for="promoDisc">Promotion Description</label>
-				<textarea name="promoDisc" class="form-control" id="summernote" cols="46" rows="10" placeholder="Enter promotion discription"></textarea>
+				<textarea name="promoDisc" class="form-control" class="summernote" cols="46" rows="10" placeholder="Enter promotion discription"></textarea>
 			</div>
 			<button type="submit" class="btn btn-primary">Add</button>
 		</form>

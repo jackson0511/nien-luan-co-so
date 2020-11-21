@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix' => 'admin'], function () {
     //Tour
     Route::get('/tour-list', 'TourController@index')->name('tour-list');
-    Route::post('add-tour-processing', 'TourController@store')->name('add-tour');
+    Route::get('/create-tour', 'TourController@create')->name('create-tour');
+    Route::post('/add-tour-processing', 'TourController@store')->name('add-tour');
     // Loại tour
     Route::get('/tour-type-list', 'TourTypeController@index')->name('tour-type-list');
     Route::post('/add-tour-type-processing', 'TourTypeController@store')->name('add-tour-type');

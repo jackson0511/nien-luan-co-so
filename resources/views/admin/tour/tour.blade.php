@@ -7,7 +7,7 @@
 		</div><!-- /.col -->
 		<div class="col-sm-6">
 			<ol class="breadcrumb float-sm-right">
-                <a class="btn btn-primary" href="">+ Add Tour</a>
+				<a class="btn btn-primary" href="{{route('create-tour')}}">+ Add Tour</a>
 			</ol>
 		</div><!-- /.col -->
 	</div><!-- /.row -->
