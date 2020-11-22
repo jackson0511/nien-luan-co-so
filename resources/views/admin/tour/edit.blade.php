@@ -22,7 +22,7 @@
             @csrf
             <div class="form-group">
                 <label for="tourName">Tour Name</label>
-                <input type="text" name="tourName"class="form-control" required value="{{$tourList->tour_name}}">
+                <input type="text" name="tourName"class="form-control" value="{{$tourList->tour_name}}">
             </div>
             <div class="form-group">
                 <label for="tourPrice">Tour Price</label>
@@ -57,7 +57,10 @@
                     <img src="{{asset('tourPhoto')}}/{{$tourList->tour_picture}}" style="width:100px; height:100px" > 
                     @endif
                 </div>
-                <input type="file" name="tourPhoto" class="form-control mt-3" >
+                @if ($tourList != null)
+                <input type="file" name="tourPhoto" class="form-control mt-3" id="hinhSanPham">
+                @endif
+                {{-- <input type="file" name="tourPhoto" class="form-control mt-3" > --}}
             </div>
             <div class="form-group">
                 <label for="tourType">Tour Type</label>

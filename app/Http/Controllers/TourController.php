@@ -76,7 +76,7 @@ class TourController extends Controller
             
             
             public function edit($id){
-                $tourList = DB::table('tour')->where('tour_id', $id)->join('tourtype','tourtype.tour_type_id','tour.tour_type_id')->join('promo', 'promo.promo_id','tour.promo_id')->first();
+                $tourList = DB::table('tour')->where('tour_id', $id)->first();
                 $promo = DB::table('promo')->get();
                 $tourTypeList = DB::table('tourtype')->get();
                 return view('admin.tour.edit', compact('tourList','tourTypeList','promo'));
@@ -94,22 +94,22 @@ class TourController extends Controller
                         'tour_end_location' => $request->endLoc,
                         'tour_begin' => $request->timeBegin,
                         'tour_end' => $request->timeEnd,
-                        'tour_picture' => $request->tourPhoto,
+                        // 'tour_picture' => $request->tourPhoto,
                         'tour_type_id' => $request->tourType,
                         'promo_id' => $request->promo,
                         // 'updated_at' => Carbon::now()
                             ]
                         );
                         Session::flash('alert-update', 'Update Successfully');
-                        return redirect()->route('tour-list');
+                        return redirect()->route('edit-tour');
                     } catch (\Throwable $th) {
                         // throw $th;
-                        if ($request->tourName == '') {
-                            # code...
-                            Session::flash('alert-update-error', 'Update process error');
-                            return redirect()->route('update-tour');
+                        // if ($request->tourName == '') {
+                        //     # code...
+                        //     Session::flash('alert-update-error', 'Update process error');
+                            return redirect()->back();
                         // dd($updateTour);
-                        }
+                        // }
                     }
                 }
 

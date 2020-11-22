@@ -18,14 +18,14 @@
 <div class="col-12">
     <form action="{{route('update-promo', ['id'=>$promoList->promo_id])}}" method="POST">
         @csrf
-        <di class="form-group">
+        <div class="form-group">
             <label for="promoName">Tên chương trình khuyến mãi:</label>
             <input type="text" autocomplete="off" value="{{$promoList->promo_name}}" name="promoName"class="form-control" id="promoName">
                 <label for="promoBegin">Ngày bắt đầu:</label>
                 <input type="date" autocomplete="off" value="{{$promoList->promo_begin}}" name="promoBegin"class="form-control" id="promoBegin">
                 <label for="promoEnd">Ngày kết thúc:</label>
                 <input type="date" autocomplete="off" value="{{$promoList->promo_end}}" name="promoEnd"class="form-control" id="promoEnd" >
-            </di
+        </div>
             <label for="promoDisc">Chi tiết chương trình khuyến mãi:</label>
             <textarea name="promoDisc" class="form-control" id="summernote" cols="46" rows="7">{{$promoList->promo_detail}}</textarea>
             <button type="submit" class="btn btn-primary mt-3">Cập nhật</button>
