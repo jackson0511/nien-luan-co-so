@@ -38,6 +38,7 @@
 			<tbody>
 				@php $i=1 @endphp
 				<tr>
+					@foreach ($tourList as $item)
 					<th>{{$i++}}</th>
 					<th>id tour</th>
 					<td>ten tour</td>
@@ -52,11 +53,11 @@
 					</td>
 					<td>gia tour</td>
 					<td>
-						{{-- <a href="{{route('sua-san-pham', ['id'=>$item->sp_id])}}"class="btn btn-success">Sửa</a> --}}
-						<a href="#"class="btn btn-primary">Chi Tiết</a>
+						<a href="{{route('detail-tour',['id'=>$item->tour_id])}}"class="btn btn-primary">Chi Tiết</a>
 						<a href="#"class="btn btn-success">Sửa</a>
 						<a href="#"class="btn btn-danger"onClick='return xoa()'>Xóa</a>
 					</td>
+					@endforeach
 				</tr>
 			</tbody>
 		</table>

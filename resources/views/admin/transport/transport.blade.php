@@ -1,60 +1,31 @@
 @extends('admin.template.master')
 @section('title')
 <div class="container-fluid">
-    <div class="row mb-2">
-        <div class="col-sm-6">
-            <h4 class="m-0 text-dark">Phương tiện di chuyển</h4>
-        </div><!-- /.col -->
-    </div><!-- /.row -->
+	<div class="row mb-2">
+		<div class="col-sm-6">
+			<h4 class="m-0 text-dark">Phương tiện di chuyển</h4>
+		</div><!-- /.col -->
+	</div><!-- /.row -->
 </div><!-- /.container-fluid -->
 @endsection
 @section('content')
+
 <div class="row">
-    <div class="col-9 text-center">
-        <h4>Danh sách phương tiện theo từ khóa: {{$keyWord}}</h4>
-        @if (Session::has('alert-del'))
-        <p style="color:green" class="text-center">
-            {{Session::get('alert-del')}}
-        </p>
-        @endif 
-        @if (Session::has('alert-del-error'))
-        <p style="color:red" class="text-center">
-            {{Session::get('alert-del-error')}}
-        </p>
-        @endif
-        @if (Session::has('alert-update'))
-        <p style="color:green" class="text-center">
-            {{Session::get('alert-update')}}
-        </p>
-        @endif 
-        @if (Session::has('alert-update-error'))
-        <p style="color:red" class="text-center">
-            {{Session::get('alert-update-error')}}
-        </p>
-        @endif
-    </div>
-    <div class="col-3 text-center">
-        <h4>Thêm phương tiện</h4>
-        @if (Session::has('alert'))
-        <p style="color:green" class="text-center">
-            {{Session::get('alert')}}
-        </p>
-        @endif 
-        @if (Session::has('alert-error'))
-        <p style="color:red" class="text-center">
-            {{Session::get('alert-error')}}
-        </p>
-        @endif  
-    </div>
+	<div class="col-9 text-center mb-2">
+		<h2><b>Danh sách phương tiện</b></h2>
+	</div>
+	<div class="col-3 text-center mb-2">
+		<h2>Thêm phương tiện</h2>
+	</div>
 </div>
 
 <div class="row">
-    <div class="col-9">
-        <form action="{{route('search-transport')}}" method="GET">
+	<div class="col-9">
+		<form action="{{route('search-transport')}}" method="GET">
             <input type="text" placeholder="Tìm kiếm..." class="col-10 ml-4" name="keyWord">
             <button type="submit" class="btn btn-primary">Tìm</button>
         </form>
-        <table class="table mt-3">
+		<table class="table mt-3">
 			<thead class="thead-dark">
 				<tr>
 					<th scope="col">#</th>
@@ -67,7 +38,7 @@
 			</thead>
 			<tbody>
 				@php $i=1 @endphp
-				@foreach ($search as $item)
+				@foreach ($transportList as $item)
 				<tr>
 					<th>{{$i++}}</th>
 					<th>{{$item->transport_id}}</th>
@@ -75,7 +46,7 @@
 					<td>{{$item->transport_brand}}</td>
 					<td>{{$item->transport_color}}</td>
 					<td>
-                        <a href="{{route('edit-transport',['id'=>$item->transport_id])}}"class="btn btn-success">Sửa</a>
+						<a href="{{route('edit-transport',['id'=>$item->transport_id])}}"class="btn btn-success">Sửa</a>
 						<a href="{{route('delete-transport',['id'=>$item->transport_id])}}"class="btn btn-danger"onClick='return del()'>Xóa</a>
 					</td>
 				</tr>

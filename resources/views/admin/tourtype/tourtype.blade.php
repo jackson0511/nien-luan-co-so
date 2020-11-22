@@ -51,8 +51,8 @@
 					<th>{{$item->tour_type_id}}</th>
 					<td>{{$item->tour_type_name}}</td>
 					<td>
-						<a href="{{route('edit-type',['id'=>$item->tour_type_id])}}"class="btn btn-success">Edit</a>
-						<a href="{{route('delete-type',['id'=>$item->tour_type_id])}}"class="btn btn-danger"onClick='return delete()'>Delete</a>
+						<a href="{{route('edit-type',['id'=>$item->tour_type_id])}}"class="btn btn-success">Sửa</a>
+						<a href="{{route('delete-type',['id'=>$item->tour_type_id])}}"class="btn btn-danger"onClick='return delete()'>Xóa</a>
 					</td>
 				</tr>
 				@endforeach

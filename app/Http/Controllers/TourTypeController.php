@@ -75,7 +75,6 @@ class TourTypeController extends Controller
     public function search(Request $request){
         $keyWord = $request->get('keyWord');
         $search = DB::table('tourtype')->where('tour_type_name','like', '%'.$keyWord.'%')->get();
-        // dd($timKiem);
         return view('admin.tourtype.search',compact('keyWord', 'search'));
     }
 }

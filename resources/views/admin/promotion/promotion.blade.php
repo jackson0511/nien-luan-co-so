@@ -57,9 +57,9 @@
 			<div class="form-group">
 				<label for="promoName">Tên chương trình khuyến mãi:</label>
 				<input type="text" name="promoName"class="form-control" id="promoName"  placeholder="Nhập tên chương trình khuyến mãi..." required>
-				<label for="promoBegion">Ngày bắt đầu:</label>
+				<label for="promoBegin">Ngày bắt đầu:</label>
 				<input type="date" class="form-control" name="promoBegin" id="promoBegin">
-				<label for="promoBegion">Ngày kết thúc:</label>
+				<label for="promoEnd">Ngày kết thúc:</label>
 				<input type="date" class="form-control" name="promoEnd" id="promoEnd">
 				<label for="promoDisc">Chi tiết chương trình khuyến mãi:</label>
 				<textarea name="promoDisc" class="form-control" class="summernote" cols="46" rows="7" placeholder="Nhập chi tiết chương trình khuyến mãi..."></textarea>
