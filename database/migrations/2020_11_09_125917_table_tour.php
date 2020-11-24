@@ -23,10 +23,12 @@ class TableTour extends Migration
             $table->date('tour_begin');
             $table->date('tour_end');
             $table->string('tour_picture');
+            $table->longText('tour_description');
+            $table->longText('tour_term');
             $table->bigInteger('tour_type_id')->unsigned();
-            $table->bigInteger('promo_id')->unsigned();
             $table->foreign('tour_type_id')->references('tour_type_id')->on('tourtype');
-            $table->foreign('promo_id')->references('promo_id')->on('promo');
+            // $table->bigInteger('promo_id')->unsigned();
+            // $table->foreign('promo_id')->references('promo_id')->on('promo');
             $table->timestamps();
         });
     }
