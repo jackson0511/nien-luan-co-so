@@ -48,10 +48,10 @@
 					<td>{{$item->tour_name}}</td>
 					<td>{{$item->tour_type_id}}</td>
 					<td>
-						@if($item->tour_picture == null)
+						@if($item->tour_avatar == null)
 						{{'Không có ảnh'}}
 						@else 
-						<img src="{{asset('tourPhoto')}}/{{$item->tour_picture}}" style="width:100px; height:100px" > 
+						<img src="{{asset('tourPhoto')}}/{{$item->tour_avatar}}" style="width:100px; height:100px" > 
                         @endif
 					</td>
 					<td>{{$item->tour_price}}</td>

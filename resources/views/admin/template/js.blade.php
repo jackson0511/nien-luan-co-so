@@ -39,7 +39,12 @@
 <script>
   $(document).ready(function()
   {
-      $('.summernote').summernote();
+      $('#summernote').summernote();
+  }
+);
+  $(document).ready(function()
+  {
+      $('#summernote1').summernote();
   }
 );
 </script>
