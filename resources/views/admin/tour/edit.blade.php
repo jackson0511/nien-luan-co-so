@@ -29,9 +29,13 @@
                 <input type="text" name="tourPrice" class="form-control" value="{{$tourList->tour_price}}">
             </div>
             <div class="form-group">
+                <label for="tourSeat">Tour Seat</label>
+                <input type="text" name="tourSeat" class="form-control" value="{{$tourList->tour_seat}}">
+            </div>
+            {{-- <div class="form-group">
                 <label for="tourStatus">Tour Status</label>
                 <input type="text" name="tourStatus" class="form-control" value="{{$tourList->tour_status}}">
-            </div>
+            </div> --}}
             <div class="form-group">
                 <label for="startLoc">Departure Location</label>
                 <input type="text" class="form-control" name="startLoc" value="{{$tourList->tour_start_location}}">
@@ -58,9 +62,22 @@
                     @endif
                 </div>
                 @if ($tourList != null)
-                <input type="file" name="tourPhoto" class="form-control mt-3" id="hinhSanPham">
+                <input type="file" name="tourPhoto" class="form-control mt-3" value="{{$tourList->tour_picture}}">
                 @endif
                 {{-- <input type="file" name="tourPhoto" class="form-control mt-3" > --}}
+            </div>
+            <div class="form-group">
+                <label for="tourAvatar">Ảnh bìa:</label>
+                @if($tourList->tour_avatar == null)
+                {{'Không có ảnh'}}
+                @else 
+                <img src="{{asset('tourAvatar')}}/{{$tourList->tour_avatar}}" style="width:100px; height:100px" > 
+                @endif
+            </div>
+            <div>
+                @if ($tourList != null)
+            <input type="file" name="tourAvatar" class="form-control mt-3" value="{{$tourList->tour_avatar}}">
+                @endif
             </div>
             <div class="form-group">
                 <label for="tourType">Tour Type</label>
@@ -71,15 +88,24 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="promo">Promotion</label>
-                <select name="promo" class="form-control" id="">
-                    @foreach ($promo as $item)
-                    <option value="{{$item->promo_id}}">{{$item->promo_name}}</option>
-                    @endforeach
-                </select>
+                <label for="tourProgram">Chương trình tour:</label>
+                <textarea name="tourProgram" class="form-control" id="summernote" cols="46" rows="10">{{$tourList->tour_description}}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="tourPolicies">Chính sách tour:</label>
+                <textarea name="tourPolicies" class="form-control" id="summernote1" cols="46" rows="10">{{$tourList->tour_policies}}</textarea>
             </div>
             <button type="submit" class="btn btn-primary">Cập nhật</button>
-        </form>
-    </div>
+        </div>
+        {{-- <div class="form-group">
+            <label for="promo">Promotion</label>
+            <select name="promo" class="form-control" id="">
+                @foreach ($promo as $item)
+                <option value="{{$item->promo_id}}">{{$item->promo_name}}</option>
+                @endforeach
+            </select>
+        </div> --}}
+    </form>
+</div>
 </div>
 @endsection

@@ -190,46 +190,24 @@
             </div>
         </div>
         <div class="row">
+            @foreach ($tourList as $item)
             <div class="col-md-3 ftco-animate">
                 <div class="project-destination">
-                    <a href="#" class="img" style="background-image: url({{asset('client_template')}}/images/place-1.jpg);">
+                    @if($item->tour_picture == null)
+						{{'Không có ảnh'}}
+						@else 
+						{{-- <img src="{{asset('tourPhoto')}}/{{$item->tour_avatar}}" style="width:100px; height:100px" >  --}}
+                        <a href="#" class="img" style="background-image: url({{asset('tourPhoto')}}/{{$item->tour_picture}});">
+                        {{-- <a href="#" class="img" style="background-image: url({{asset('client_template')}}/images/place-1.jpg);"> --}}
+                        @endif
                         <div class="text">
-                            <h3>Singapore</h3>
-                            <span>8 Tours</span>
+                            <h3 class="text-dark">{{$item->tour_start_location}}</h3>
+                            <span>{{$sumTour}} Tours</span>
                         </div>
                     </a>
                 </div>
             </div>
-            <div class="col-md-3 ftco-animate">
-                <div class="project-destination">
-                    <a href="#" class="img" style="background-image: url({{asset('client_template')}}/images/place-2.jpg);">
-                        <div class="text">
-                            <h3>Canada</h3>
-                            <span>2 Tours</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 ftco-animate">
-                <div class="project-destination">
-                    <a href="#" class="img" style="background-image: url({{asset('client_template')}}/images/place-3.jpg);">
-                        <div class="text">
-                            <h3>Thailand</h3>
-                            <span>5 Tours</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 ftco-animate">
-                <div class="project-destination">
-                    <a href="#" class="img" style="background-image: url({{asset('client_template')}}/images/place-4.jpg);">
-                        <div class="text">
-                            <h3>Autralia</h3>
-                            <span>5 Tours</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
@@ -241,102 +219,28 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 ftco-animate">
-                <div class="project-wrap">
-                    <a href="#" class="img" style="background-image: url({{asset('client_template')}}/images/destination-1.jpg);"></a>
-                    <div class="text p-4">
-                        <span class="price">$300/person</span>
-                        <span class="days">8 Days Tour</span>
-                        <h3><a href="#">Bali, Indonesia</a></h3>
-                        <p class="location"><span class="ion-ios-map"></span> Bali, Indonesia</p>
-                        <ul>
-                            <li><span class="flaticon-shower"></span>2</li>
-                            <li><span class="flaticon-king-size"></span>3</li>
-                            <li><span class="flaticon-mountains"></span>Near Mountain</li>
-                        </ul>
+            @foreach ($tourList as $item)
+                <div class="col-md-4 ftco-animate">
+                    <div class="project-wrap">
+                        {{-- <a href="#" class="img" style="background-image: url({{asset('client_template')}}/images/destination-1.jpg);"></a> --}}
+                        <a href="#" class="img" style="background-image: url({{asset('tourAvatar')}}/{{$item->tour_avatar}});"></a>
+                        <div class="text p-4">
+                            <span class="price">{{number_format($item->tour_price)}}đ/Người</span>
+                            {{-- <span class="days">{{$item->tour_end->day() - $item->tour_begin->day()}} Days Tour</span> --}}
+                            <h3><a href="#">{{$item->tour_start_location}}</a></h3>
+                            <p class="location"><span class="ion-ios-map"></span> {{$item->tour_start_location}}, {{$item->tour_end_location}}</p>
+                            {{-- <span class="days">8 Days Tour</span>
+                            <h3><a href="#">Bali, Indonesia</a></h3>
+                            <p class="location"><span class="ion-ios-map"></span> Bali, Indonesia</p> --}}
+                            {{-- <ul>
+                                <li><span class="flaticon-shower"></span>2</li>
+                                <li><span class="flaticon-king-size"></span>3</li>
+                                <li><span class="flaticon-mountains"></span>Near Mountain</li>
+                            </ul> --}}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 ftco-animate">
-                <div class="project-wrap">
-                    <a href="#" class="img" style="background-image: url({{asset('client_template')}}/images/destination-2.jpg);"></a>
-                    <div class="text p-4">
-                        <span class="price">$300/person</span>
-                        <span class="days">10 Days Tour</span>
-                        <h3><a href="#">Bali, Indonesia</a></h3>
-                        <p class="location"><span class="ion-ios-map"></span> Bali, Indonesia</p>
-                        <ul>
-                            <li><span class="flaticon-shower"></span>2</li>
-                            <li><span class="flaticon-king-size"></span>3</li>
-                            <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 ftco-animate">
-                <div class="project-wrap">
-                    <a href="#" class="img" style="background-image: url({{asset('client_template')}}/images/destination-3.jpg);"></a>
-                    <div class="text p-4">
-                        <span class="price">$300/person</span>
-                        <span class="days">7 Days Tour</span>
-                        <h3><a href="#">Bali, Indonesia</a></h3>
-                        <p class="location"><span class="ion-ios-map"></span> Bali, Indonesia</p>
-                        <ul>
-                            <li><span class="flaticon-shower"></span>2</li>
-                            <li><span class="flaticon-king-size"></span>3</li>
-                            <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 ftco-animate">
-                <div class="project-wrap">
-                    <a href="#" class="img" style="background-image: url({{asset('client_template')}}/images/destination-4.jpg);"></a>
-                    <div class="text p-4">
-                        <span class="price">$300/person</span>
-                        <span class="days">8 Days Tour</span>
-                        <h3><a href="#">Bali, Indonesia</a></h3>
-                        <p class="location"><span class="ion-ios-map"></span> Bali, Indonesia</p>
-                        <ul>
-                            <li><span class="flaticon-shower"></span>2</li>
-                            <li><span class="flaticon-king-size"></span>3</li>
-                            <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 ftco-animate">
-                <div class="project-wrap">
-                    <a href="#" class="img" style="background-image: url({{asset('client_template')}}/images/destination-5.jpg);"></a>
-                    <div class="text p-4">
-                        <span class="price">$300/person</span>
-                        <span class="days">10 Days Tour</span>
-                        <h3><a href="#">Bali, Indonesia</a></h3>
-                        <p class="location"><span class="ion-ios-map"></span> Bali, Indonesia</p>
-                        <ul>
-                            <li><span class="flaticon-shower"></span>2</li>
-                            <li><span class="flaticon-king-size"></span>3</li>
-                            <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 ftco-animate">
-                <div class="project-wrap">
-                    <a href="#" class="img" style="background-image: url({{asset('client_template')}}/images/destination-6.jpg);"></a>
-                    <div class="text p-4">
-                        <span class="price">$300/person</span>
-                        <span class="days">7 Days Tour</span>
-                        <h3><a href="#">Bali, Indonesia</a></h3>
-                        <p class="location"><span class="ion-ios-map"></span> Bali, Indonesia</p>
-                        <ul>
-                            <li><span class="flaticon-shower"></span>2</li>
-                            <li><span class="flaticon-king-size"></span>3</li>
-                            <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>

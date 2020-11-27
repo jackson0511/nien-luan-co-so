@@ -224,6 +224,7 @@ Route::group(['prefix' => 'admin'], function () {
 
 });
 
-    Route::get('/', function () {
-        return view('client.index');
-    });
+    Route::get('/', 'TourController@clientShowInfo')->name('home');
+    // Route::get('/', function () {
+    //     return view('client.index');
+    // });

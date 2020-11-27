@@ -19,7 +19,7 @@
             @if($tourList->tour_avatar == null)
             {{'Không có ảnh'}}
             @else 
-            <img src="{{asset('tourPhoto')}}/{{$tourList->tour_avatar}}" style="width:100px; height:100px" > 
+            <img src="{{asset('tourAvatar')}}/{{$tourList->tour_avatar}}" style="width:100px; height:100px" > 
             @endif<br>
 		<p><b>Địa điểm xuất phát:</b> {{$tourList->tour_start_location}}</p><br>
 		<p><b>Địa điểm đến:</b> {{$tourList->tour_end_location}}</p><br>
