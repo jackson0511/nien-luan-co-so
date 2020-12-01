@@ -41,6 +41,7 @@
   box-sizing: border-box; }
 
 html {
+  scroll-behavior: smooth;
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -9490,3 +9491,15 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+.collapse-element{
+  display: none;
+}
+
+.showdata{
+  left: 100px;
+}
+
+.show-data:active + collapse-element{
+  display: block;
+}

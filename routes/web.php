@@ -228,3 +228,30 @@ Route::group(['prefix' => 'admin'], function () {
     // Route::get('/', function () {
     //     return view('client.index');
     // });
+    Route::get('/destination', function () {
+        return view('client.destination');
+    })->name('destination');
+    Route::get('/blog', function () {
+        return view('client.blog');
+    })->name('blog');
+    Route::get('/blog-single', function () {
+        return view('client.blog-single');
+    })->name('blog-single');
+    Route::get('/tour-single', function () {
+        return view('client.tour-single');
+    })->name('tour-single');
+    Route::get('/about', function () {
+        return view('client.about');
+    })->name('about');
+    Route::get('/contact', function () {
+        return view('client.contact');
+    })->name('contact');
+    Route::get('/login', function () {
+        return view('login');
+    })->name('login');
+    Route::get('/register', function () {
+        return view('register');
+    })->name('register');
+    Route::get('/forgot', function () {
+        return view('forgotpass');
+    })->name('forgot');
