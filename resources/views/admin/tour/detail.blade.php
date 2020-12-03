@@ -42,14 +42,10 @@
 		{{-- <p><b>Trạng thái tour:</b> {{$tourList->tour_status}}</p> --}}
 		<p><b>Loại tour:</b> {{$tourList->tour_type_name}}</p>
 		{{-- <p><b>Khuyến mãi:</b> {{$tourList->promo_id}}</p> --}}
-		<div class="row">
-			<div class="col-9"></div>
-			<div class="col-3">
-				<a href="{{route('detail-tour',['id'=>$tourList->tour_id])}}"class="btn btn-primary">Chi tiết</a>
+		<div class="float-right">
 				<a href="{{route('edit-tour',['id'=>$tourList->tour_id])}}"class="btn btn-success">Sửa</a>
 				<button onclick="goBack()" class="btn btn-secondary">Quay lại</button>
 			</div>
-		</div>
 	</div>
 </div>
 <script>
