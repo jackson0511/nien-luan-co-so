@@ -22,6 +22,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/delete-tour/{id}', 'TourController@destroy')->name('delete-tour');
     Route::get('/edit-tour/{id}', 'TourController@edit')->name('edit-tour');
     Route::post('/update-tour/{id}', 'TourController@update')->name('update-tour');
+    Route::get('/search-tour', 'TourController@search')->name('search-tour');
 
     // 2.Loại tour
     Route::get('/tour-type-list', 'TourTypeController@index')->name('tour-type-list');

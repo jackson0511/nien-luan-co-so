@@ -198,7 +198,7 @@
           <div class="block-21 mb-4 d-flex">
             <a class="blog-img mr-4" style="background-image: url({{asset('client_template')}}/images/image_1.jpg);"></a>
             <div class="text">
-              <h3 class="heading"><a href="{{route('blog-single')}}">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+              <h3 class="heading"><a href="{{route('blog-single')}}">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></h3>
               <div class="meta">
                 <div><a href="{{route('blog-single')}}"><span class="icon-calendar"></span> 21 Tháng 11, 2020</a></div>
                 <div><a href="{{route('blog-single')}}"><span class="icon-person"></span> Admin</a></div>
@@ -209,7 +209,7 @@
           <div class="block-21 mb-4 d-flex">
             <a class="blog-img mr-4" style="background-image: url({{asset('client_template')}}/images/image_2.jpg);"></a>
             <div class="text">
-              <h3 class="heading"><a href="{{route('blog-single')}}">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+              <h3 class="heading"><a href="{{route('blog-single')}}">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></h3>
               <div class="meta">
                 <div><a href="{{route('blog-single')}}"><span class="icon-calendar"></span> 21 Tháng 11, 2020</a></div>
                 <div><a href="{{route('blog-single')}}"><span class="icon-person"></span> Admin</a></div>
@@ -220,7 +220,7 @@
           <div class="block-21 mb-4 d-flex">
             <a class="blog-img mr-4" style="background-image: url({{asset('client_template')}}/images/image_3.jpg);"></a>
             <div class="text">
-              <h3 class="heading"><a href="{{route('blog-single')}}">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+              <h3 class="heading"><a href="{{route('blog-single')}}">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></h3>
               <div class="meta">
                 <div><a href="{{route('blog-single')}}"><span class="icon-calendar"></span> 21 Tháng 11, 2020</a></div>
                 <div><a href="{{route('blog-single')}}"><span class="icon-person"></span> Admin</a></div>

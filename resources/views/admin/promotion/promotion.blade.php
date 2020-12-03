@@ -2,8 +2,11 @@
 @section('title')
 <div class="container-fluid">
 	<div class="row mb-2">
-		<div class="col-sm-6">
-			<h1 class="m-0 text-dark">Chương trình khuyến mãi</h1>
+		<div class="col-5">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="{{route('tour-list')}}">Chương trình khuyến mãi</a></li>
+				<li class="breadcrumb-item active">Danh sách chương trình khuyến mãi</li>
+			</ol>
 		</div><!-- /.col -->
 	</div><!-- /.row -->
 </div><!-- /.container-fluid -->
@@ -12,10 +15,10 @@
 
 <div class="row">
 	<div class="col-7 text-center mb-2">
-		<h2><b>Danh sách chương trình khuyến mãi</b></h2>
+		<h2 class="text-secondary"><b class="text-primary">Danh sách chương trình khuyến mãi</b></h2>
 	</div>
 	<div class="col-5 text-center mb-2">
-		<h2>Thêm chương trình khuyến mãi</h2>
+		<h2 class="text-info">Thêm chương trình khuyến mãi</h2>
 	</div>
 </div>
 

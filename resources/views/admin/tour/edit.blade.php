@@ -1,9 +1,22 @@
 @extends('admin.template.master')
 @section('content')
 <div class="row">
-    
+    <!-- Content Header (Page header) -->
+    <div class="content-header mt-0 col-12">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{route('tour-list')}}">Tour</a></li>
+                        <li class="breadcrumb-item active">Cập nhật tour</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
     <div class="col-12 text-center">
-        <h4><b>Cập nhật tour:</b> {{$tourList->tour_name}}</h4>
+        <h4 class="text-secondary"><b class="text-primary">Cập nhật tour:</b> {{$tourList->tour_name}}</h4>
         @if (Session::has('alert-del-pr'))
         <p style="color:green" class="text-center">
             {{Session::get('alert-del-pr')}}
@@ -76,7 +89,7 @@
             </div>
             <div>
                 @if ($tourList != null)
-            <input type="file" name="tourAvatar" class="form-control mt-3" value="{{$tourList->tour_avatar}}">
+                <input type="file" name="tourAvatar" class="form-control mt-3" value="{{$tourList->tour_avatar}}">
                 @endif
             </div>
             <div class="form-group">
@@ -95,7 +108,10 @@
                 <label for="tourPolicies">Chính sách tour:</label>
                 <textarea name="tourPolicies" class="form-control" id="summernote1" cols="46" rows="10">{{$tourList->tour_policies}}</textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Cập nhật</button>
+            <div class="float-right">
+                <button type="submit" class="btn btn-primary">Cập nhật</button>
+                <a href="{{route('tour-list')}}" class="btn btn-secondary">Quay lại</a>
+            </div>
         </div>
         {{-- <div class="form-group">
             <label for="promo">Promotion</label>

@@ -2,9 +2,12 @@
 @section('title')
 <div class="container-fluid">
 	<div class="row mb-2">
-		<div class="col-sm-6">
-			<h4 class="m-0 text-dark">Phương tiện di chuyển</h4>
-		</div><!-- /.col -->
+		<div class="col-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{route('transport-list')}}">Phương tiện</a></li>
+                <li class="breadcrumb-item active">Cập nhật phương tiện</li>
+            </ol>
+        </div><!-- /.col -->
 	</div><!-- /.row -->
 </div><!-- /.container-fluid -->
 @endsection
@@ -12,10 +15,10 @@
 
 <div class="row">
 	<div class="col-9 text-center mb-2">
-		<h2><b>Danh sách phương tiện</b></h2>
+		<h2 class="text-secondary"><b class="text-primary">Danh sách phương tiện</b></h2>
 	</div>
 	<div class="col-3 text-center mb-2">
-		<h2>Thêm phương tiện</h2>
+		<h2 class="text-info">Thêm phương tiện</h2>
 	</div>
 </div>
 

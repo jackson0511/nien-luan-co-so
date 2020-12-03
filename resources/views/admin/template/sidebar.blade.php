@@ -39,7 +39,7 @@
             </a>
             <a href="{{route('transport-list')}}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
-              <p>Phương tiện đi lại</p>
+              <p>Phương tiện di chuyển</p>
             </a>
             {{-- <a href="#" class="nav-link">
               <i class="nav-icon fas fa-th"></i>

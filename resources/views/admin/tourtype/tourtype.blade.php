@@ -2,8 +2,11 @@
 @section('title')
 <div class="container-fluid">
 	<div class="row mb-2">
-		<div class="col-sm-6">
-			<h1 class="m-0 text-dark">Loại tour</h1>
+		<div class="col-4">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="{{route('tour-type-list')}}">Loại tour</a></li>
+				<li class="breadcrumb-item active">Danh sách loại tour</li>
+			</ol>
 		</div><!-- /.col -->
 	</div><!-- /.row -->
 </div><!-- /.container-fluid -->
@@ -11,10 +14,10 @@
 @section('content')
 <div class="row">
 	<div class="col-9 text-center mb-2">
-		<h2><b>Danh sách loại tour</b></h2>
+		<h2 class="text-primary"><b>Danh sách loại tour</b></h2>
 	</div>
 	<div class="col-3 text-center">
-		<h4>Thêm loại tour</h4>
+		<h4 class="text-info">Thêm loại tour</h4>
 		@if (Session::has('alert-del-pr'))
 		<p style="color:green" class="text-center">
 			{{Session::get('alert-del-pr')}}

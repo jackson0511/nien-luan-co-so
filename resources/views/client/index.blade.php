@@ -295,8 +295,8 @@
                                 <span class="mos">Tháng 12</span>
                             </div>
                         </div>
-                        <h3 class="heading"><a  href="{{route('blog-single')}}">Why Lead Generation is Key for Business Growth</a></h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        <h3 class="heading"><a  href="{{route('blog-single')}}">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit autem excepturi, sed asperiores molestias deleniti maxime.</p>
                     </div>
                 </div>
             </div>
@@ -314,8 +314,8 @@
                                 <span class="mos">Tháng 12</span>
                             </div>
                         </div>
-                        <h3 class="heading"><a href="{{route('blog-single')}}">Why Lead Generation is Key for Business Growth</a></h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        <h3 class="heading"><a href="{{route('blog-single')}}">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit autem excepturi, sed asperiores molestias deleniti maxime.</p>
                     </div>
                 </div>
             </div>
@@ -333,8 +333,8 @@
                                 <span class="mos">Tháng 12</span>
                             </div>
                         </div>
-                        <h3 class="heading"><a href="{{route('blog-single')}}">Why Lead Generation is Key for Business Growth</a></h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        <h3 class="heading"><a href="{{route('blog-single')}}">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit autem excepturi, sed asperiores molestias deleniti maxime.</p>
                     </div>
                 </div>
             </div>

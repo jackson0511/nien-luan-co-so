@@ -2,9 +2,10 @@
 @section('title')
 <div class="container-fluid">
 	<div class="row mb-2">
-		<div class="col-sm-6">
-			<h1 class="m-0 text-dark">Tour</h1>
-		</div><!-- /.col -->
+		<ol class="breadcrumb col-6">
+			<li class="breadcrumb-item"><a href="{{route('tour-list')}}">Tour</a></li>
+			<li class="breadcrumb-item active">Danh sách tour</li>
+		</ol>
 		<div class="col-sm-6">
 			<ol class="breadcrumb float-sm-right">
 				<a class="btn btn-primary" href="{{route('create-tour')}}">+ Thêm Tour</a>
@@ -17,13 +18,13 @@
 
 <div class="row">
 	<div class="col-12 text-center mb-2">
-		<h2><b>Danh sách tour</b></h2>
+		<h2 class="text-primary"><b>Danh sách tour</b></h2>
 	</div>
 </div>
 
 <div class="row">
 	<div class="col-12">
-		<form action="{{route('search-type')}}" method="GET">
+		<form action="{{route('search-tour')}}" method="GET">
 			<input type="text" placeholder="Tìm kiếm..." class="col-10 ml-4" name="keyWord">
 			<button type="submit" class="btn btn-primary">Tìm kiếm</button>
 		</form>
@@ -54,7 +55,7 @@
 						<img src="{{asset('tourAvatar')}}/{{$item->tour_avatar}}" style="width:100px; height:100px" > 
                         @endif
 					</td>
-					<td>{{$item->tour_price}}</td>
+					<td>{{number_format($item->tour_price)}}</td>
 					<td>
 						<a href="{{route('detail-tour',['id'=>$item->tour_id])}}"class="btn btn-primary">Chi Tiết</a>
 						<a href="{{route('edit-tour',['id'=>$item->tour_id])}}"class="btn btn-success">Sửa</a>

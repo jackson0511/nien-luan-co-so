@@ -2,8 +2,11 @@
 @section('title')
 <div class="container-fluid">
     <div class="row mb-2">
-        <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Chương trình khuyến mãi</h1>
+        <div class="col-5">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{route('promo-list')}}">Chương trình khuyến mãi</a></li>
+                <li class="breadcrumb-item active">Danh sách chương trình khuyến mãi</li>
+            </ol>
         </div><!-- /.col -->
     </div><!-- /.row -->
 </div><!-- /.container-fluid -->
@@ -11,7 +14,7 @@
 @section('content')
 <div class="row">
     <div class="col-7 text-center">
-        <h4>Danh sách chương trình khuyến mãi theo từ khóa: {{$keyWord}}</h4>
+        <h4 class="text-secondary"><b class="text-primary">Danh sách chương trình khuyến mãi theo từ khóa:</b> {{$keyWord}}</h4>
         @if (Session::has('alert-del'))
         <p style="color:green" class="text-center">
             {{Session::get('alert-del')}}
@@ -34,7 +37,7 @@
         @endif
     </div>
     <div class="col-5 text-center">
-        <h4>Thêm chương trình khuyến mãi</h4>
+        <h4 class="text-info">Thêm chương trình khuyến mãi</h4>
         @if (Session::has('alert'))
         <p style="color:green" class="text-center">
             {{Session::get('alert')}}
@@ -71,8 +74,9 @@
                     <th>{{$item->promo_id}}</th>
                     <td>{{$item->promo_name}}</td>
                     <td>
-                        <a href="{{route('edit-type',['id'=>$item->promo_id])}}"class="btn btn-success">Sửat</a>
-                        <a href="{{route('delete-type',['id'=>$item->promo_id])}}"class="btn btn-danger"onClick='return delete()'>Xóa</a>
+                        <a href="{{route('detail-promo',['id'=>$item->promo_id])}}"class="btn btn-primary">Chi tiết</a>
+                        <a href="{{route('edit-promo',['id'=>$item->promo_id])}}"class="btn btn-success">Sửa</a>
+                        <a href="{{route('delete-promo',['id'=>$item->promo_id])}}"class="btn btn-danger"onClick='return delete()'>Xóa</a>
                     </td>
                 </tr>
                 @endforeach

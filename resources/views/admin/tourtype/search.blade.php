@@ -2,16 +2,19 @@
 @section('title')
 <div class="container-fluid">
     <div class="row mb-2">
-        <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Loại tour</h1>
-        </div><!-- /.col -->
+        <div class="col-4">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="{{route('tour-type-list')}}">Loại tour</a></li>
+				<li class="breadcrumb-item active">Danh sách loại tour</li>
+			</ol>
+		</div><!-- /.col -->
     </div><!-- /.row -->
 </div><!-- /.container-fluid -->
 @endsection
 @section('content')
 <div class="row">
     <div class="col-9 text-center">
-        <h4>Danh sách loại tour theo từ khóa: {{$keyWord}}</h4>
+        <h4 class="text-secondary"><b class="text-primary">Danh sách loại tour theo từ khóa:</b> {{$keyWord}}</h4>
         @if (Session::has('alert-del'))
         <p style="color:green" class="text-center">
             {{Session::get('alert-del')}}
@@ -34,7 +37,7 @@
         @endif
     </div>
     <div class="col-3 text-center">
-        <h4>Thêm loại tour</h4>
+        <h4 class="text-info">Thêm loại tour</h4>
         @if (Session::has('alert'))
         <p style="color:green" class="text-center">
             {{Session::get('alert')}}
@@ -71,8 +74,8 @@
                     <th>{{$item->tour_type_id}}</th>
                     <td>{{$item->tour_type_name}}</td>
                     <td>
-                        <a href="{{route('edit-type',['id'=>$item->tour_type_id])}}"class="btn btn-success">Edit</a>
-                        <a href="{{route('delete-type',['id'=>$item->tour_type_id])}}"class="btn btn-danger"onClick='return delete()'>Delete</a>
+                        <a href="{{route('edit-type',['id'=>$item->tour_type_id])}}"class="btn btn-success">Sửa</a>
+                        <a href="{{route('delete-type',['id'=>$item->tour_type_id])}}"class="btn btn-danger"onClick='return delete()'>Xóa</a>
                     </td>
                 </tr>
                 @endforeach

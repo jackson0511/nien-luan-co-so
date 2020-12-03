@@ -18,7 +18,7 @@ class TourController extends Controller
     public function search(Request $request){
         $keyWord = $request->get('keyWord');
         $search = DB::table('tour')->where('tour_name','like','%'.$keyWord.'%')->get();
-        return view('admin.tour.tour',compact('keyWord', 'search'));
+        return view('admin.tour.search',compact('keyWord', 'search'));
     }
     
     public function create(){

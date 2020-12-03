@@ -28,9 +28,8 @@
     <div class="row d-flex">
       <div class="col-md-6 order-md-last heading-section pl-md-5 ftco-animate">
         <h2 class="mb-4">Đã đến lúc bắt đầu cuộc hành trình của bạn</h2>
-        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-          A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit autem excepturi, sed asperiores molestias deleniti maxime. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sit distinctio numquam. Ipsum cum blanditiis provident accusamus, officia ullam modi, inventore eos animi ad iusto voluptates, aliquam neque perspiciatis maxime laboriosam veniam saepe beatae enim facere eius. Accusantium nisi nemo quisquam. Minima dolorem itaque exercitationem tenetur in quas est alias!</p>
         <p><a href="{{route('destination')}}" class="btn btn-primary py-3 px-4">Tìm kiếm địa điểm</a></p>
       </div>
       <div class="col-md-6">
@@ -40,7 +39,7 @@
               <div class="icon"><span class="flaticon-paragliding"></span></div>
               <div class="media-body">
                 <h3 class="heading mb-3">Hoạt động</h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quos maiores molestias, deleniti aliquam porro.</p>
               </div>
             </div>      
           </div>
@@ -49,7 +48,7 @@
               <div class="icon"><span class="flaticon-route"></span></div>
               <div class="media-body">
                 <h3 class="heading mb-3">Sắp xếp lịch trình</h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam minima hic alias cupiditate, reiciendis cumque amet corrupti odit repellat natus.</p>
               </div>
             </div>    
           </div>
@@ -58,7 +57,7 @@
               <div class="icon"><span class="flaticon-tour-guide"></span></div>
               <div class="media-body">
                 <h3 class="heading mb-3">Hướng dẫn viên chuyên nghiệp</h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi maxime suscipit esse.</p>
               </div>
             </div>      
           </div>
@@ -67,7 +66,7 @@
               <div class="icon"><span class="flaticon-map"></span></div>
               <div class="media-body">
                 <h3 class="heading mb-3">Quản lý địa điểm</h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, praesentium sed? Ducimus.</p>
               </div>
             </div>      
           </div>
@@ -87,7 +86,7 @@
         <div class="row justify-content-start pb-3">
           <div class="col-md-12 heading-section ftco-animate">
             <h2 class="mb-4">Làm cho chuyến đi của bạn an toàn và đáng nhớ cùng chúng tôi</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, velit repellat eveniet dolores aliquid aut at veniam neque fugiat, aliquam laboriosam officia doloremque ipsum eaque.</p>
           </div>
         </div>
         <div class="row">
@@ -134,7 +133,7 @@
           <div class="item">
             <div class="testimony-wrap py-4">
               <div class="text">
-                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur blanditiis suscipit maiores id iusto rerum.</p>
                 <div class="d-flex align-items-center">
                   <div class="user-img" style="background-image: url({{asset('client_template')}}/images/person_1.jpg)"></div>
                   <div class="pl-3">
@@ -148,7 +147,7 @@
           <div class="item">
             <div class="testimony-wrap py-4">
               <div class="text">
-                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <p class="mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, voluptas ullam qui eos mollitia aliquam!</p>
                 <div class="d-flex align-items-center">
                   <div class="user-img" style="background-image: url({{asset('client_template')}}/images/person_2.jpg)"></div>
                   <div class="pl-3">
@@ -162,7 +161,7 @@
           <div class="item">
             <div class="testimony-wrap py-4">
               <div class="text">
-                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis atque cum quod! Cupiditate, alias reprehenderit.</p>
                 <div class="d-flex align-items-center">
                   <div class="user-img" style="background-image: url({{asset('client_template')}}/images/person_3.jpg)"></div>
                   <div class="pl-3">
@@ -176,7 +175,7 @@
           <div class="item">
             <div class="testimony-wrap py-4">
               <div class="text">
-                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus possimus, adipisci blanditiis consequatur quas deleniti.</p>
                 <div class="d-flex align-items-center">
                   <div class="user-img" style="background-image: url({{asset('client_template')}}/images/person_1.jpg)"></div>
                   <div class="pl-3">
@@ -190,7 +189,7 @@
           <div class="item">
             <div class="testimony-wrap py-4">
               <div class="text">
-                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatum laudantium assumenda eveniet saepe illo.</p>
                 <div class="d-flex align-items-center">
                   <div class="user-img" style="background-image: url({{asset('client_template')}}/images/person_2.jpg)"></div>
                   <div class="pl-3">

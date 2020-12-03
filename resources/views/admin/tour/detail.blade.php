@@ -1,8 +1,22 @@
 @extends('admin.template.master')
 @section('content')
+<!-- Content Header (Page header) -->
+<div class="content-header mt-0">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-2">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="{{route('tour-list')}}">Tour</a></li>
+					<li class="breadcrumb-item active">Chi tiết tour</li>
+				</ol>
+			</div><!-- /.col -->
+		</div><!-- /.row -->
+	</div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
 <div class="row">
 	<div class="col-12 text-center">
-		<h4>Chi tiết Tour: {{$tourList->tour_name}}</h4>
+		<h4 class="text-secondary"><b class="text-primary">Chi tiết Tour:</b> {{$tourList->tour_name}}</h4>
 	</div>
 </div>
 <div class="row">

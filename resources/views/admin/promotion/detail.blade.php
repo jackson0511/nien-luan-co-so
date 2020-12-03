@@ -2,7 +2,7 @@
 @section('content')
 <div class="row">
 	<div class="col-12 text-center">
-		<h4>Chi tiết chương trình khuyến mãi: {{$promoList->promo_name}}</h4>
+		<h4 class="text-secondary"><b class="text-primary">Chi tiết chương trình khuyến mãi:</b> {{$promoList->promo_name}}</h4>
 	</div>
 </div>
 <div class="row">

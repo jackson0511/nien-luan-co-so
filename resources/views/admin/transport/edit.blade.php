@@ -2,8 +2,11 @@
 @section('title')
 <div class="container-fluid">
     <div class="row mb-2">
-        <div class="col-sm-6">
-            <h4 class="m-0 text-dark">Phương tiện di chuyển</h4>
+        <div class="col-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{route('transport-list')}}">Phương tiện</a></li>
+                <li class="breadcrumb-item active">Cập nhật phương tiện</li>
+            </ol>
         </div><!-- /.col -->
     </div><!-- /.row -->
 </div><!-- /.container-fluid -->
@@ -12,7 +15,7 @@
 
 <div class="row">
     <div class="col-12 text-center">
-        <h4>Cập nhật phương tiện: {{$transportList->transport_name}}</h4>
+        <h4 class="text-secondary"><b class="text-primary">Cập nhật phương tiện:</b> {{$transportList->transport_name}}</h4>
     </div>
 </div>
 <div class="col-12">
@@ -26,12 +29,9 @@
             <label for="transColor">Màu sắc:</label>
             <input type="text" autocomplete="off" value="{{$transportList->transport_color}}" name="transColor"class="form-control" id="transportEnd" >
         </div>
-        <div class="row">
-            <div class="col-10"></div>
-            <div class="col-2S">
-                <button type="submit" class="btn btn-primary mt-3">Cập nhật</button>
-                <button onclick="goBack()" class="btn btn-secondary mt-3">Quay lại</button>
-            </div>
+        <div class="float-right">
+            <button type="submit" class="btn btn-primary mt-3">Cập nhật</button>
+            <button onclick="goBack()" class="btn btn-secondary mt-3">Quay lại</button>
         </div>
     </div>
 </form>
