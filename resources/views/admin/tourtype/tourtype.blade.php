@@ -47,8 +47,8 @@
 				</tr>
 			</thead>
 			<tbody>
-				@foreach ($tourTypeList as $item)
 				@php $i=1 @endphp
+				@foreach ($tourTypeList as $item)
 				<tr>
 					<th>{{$i++}}</th>
 					<th>{{$item->tour_type_id}}</th>

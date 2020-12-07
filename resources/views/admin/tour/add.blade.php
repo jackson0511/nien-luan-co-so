@@ -74,7 +74,7 @@
                     <input type="text" class="form-control" name="startLoc">
                 </div>
                 <div class="form-group">
-                    <label for="endLoc">Địa điểm kết thúc:</label>
+                    <label for="endLoc">Địa điểm đến:</label>
                     <input type="text" class="form-control" name="endLoc">
                 </div>
                 <div class="form-group">
