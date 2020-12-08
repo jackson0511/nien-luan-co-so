@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['prefix' => 'admin'], function () {
+
+    Route::get('login', function () {
+        return view('admin.login.login');
+    });
+
     //1.Tour
     Route::get('/tour-list', 'TourController@index')->name('tour-list');
     Route::get('/create-tour', 'TourController@create')->name('create-tour');
